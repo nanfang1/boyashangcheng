@@ -2,198 +2,213 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
-		<title></title>
-		<meta name="viewport"  content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-		<script src="js/html5shiv.js"></script>
-		<script src="js/response.min.js"></script>
+		<title>博雅商城</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<!--加载分页器-->
+		<style>
+			.swiper-pagination-bullet{
+				width:15px;
+				height:15px;
+			}
+		</style>
 	</head>
 	<body>
-<!--头部导航-->
-		<header id="header">
-			<div class="center">
-				<div class="logo"></div>
-				<nav class="link">
-					<ul>
-						<li><a href="#">首页</a></li>
-						<li><a href="#">旅游咨询</a></li>
-						<li><a href="#">机票订购</a></li>
-						<li><a href="#">风景欣赏</a></li>
-						<li><a href="#">关于公司</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-<!--banner-->		
-		<div id="adver">
-			<img src="img/adver.jpg"/>
-			<div class="center">
-				<input type="text"  class="search" placeholder="去哪？"/>
-				<button class="butotn">戳一下</button>
+		<!--头部导航-->
+		<div class='top'>
+			<div class='wrap'>
+				<div class='logo'></div>
+				
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="">博雅游戏</a></li>
+					<li><a href="">博雅新闻</a></li>
+					<li><a href="">关于我们</a></li>
+					<li><a href="">客服中心</a></li>
+					<li><a href="">投资者关系</a></li>
+				</ul>
+				
+				<div class='jrwm'>
+					<img src="img/jrwm.png" alt="" />
+				</div>
+				
+				<div class='clear'></div>
 			</div>
 		</div>
-		<!--旅游列表-->
-		<div id="tour">
-			<div class="center">
-				<h2>旅游推荐</h2>
-				<p>
-					<a href="">国内旅游</a>
-					<a href="">国外旅游</a>
-					<a href="">自助旅游</a>
-					<a href="">自驾旅游</a>
-					<a href="">邮轮签证</a>
-					<a href="">主题旅游</a>
-				</p>
+		<!--banner图-->
+		<!--<div class='banner'>
+			<div class='dian'>
+				<ol>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
 			</div>
-			<!--推荐内容-->
-			<figure class="figure">
-				<figcaption class="figcaption">
-					<a href=""><img src="img/tour1.jpg"/></a>
-					
-					<div class="tour_title">
-						<strong class="title">	
-						😀曼谷-芭提雅6日游😀
-						</strong>
-						包团特惠超丰富景点，升级1晚国五，无自费，更赠送600/人自费券
+		</div>-->
+		<div class="swiper-container">
+			<!--轮播图片部分-->
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide">
+		        	<img src="img/banner.jpg" alt="" />
+		        </div>
+		        <div class="swiper-slide">
+		        	<img src="img/banner.jpg" alt="" />
+		        </div>
+		        <div class="swiper-slide">
+		        	<img src="img/banner.jpg" alt="" />
+		        </div>
+		        <div class="swiper-slide">
+		        	<img src="img/banner.jpg" alt="" />
+		        </div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination swiper-pagination-white"></div>
+		    <!-- 如果需要导航按钮 -->
+		    <div class="swiper-button-prev"></div>
+		    <div class="swiper-button-next"></div>
+		</div>
+		<!--加载JS-->
+		<script src='js/swiper.min.js'></script>
+		<script>
+			var mySwiper = new Swiper ('.swiper-container', {
+			    loop: true,//---循环播放
+			    autoplay:1000,//---自动播放，1s一张图片
+			    autoplayDisableOnInteraction:false,//---让点击分页、按钮后继续轮播
+			    speed:1000,//---轮播速度
+			    pagination: '.swiper-pagination',// 如果需要分页器
+			    paginationClickable:true,//---分页能否被点击
+			    nextButton: '.swiper-button-next',  // 如果需要前进后退按钮
+			    prevButton: '.swiper-button-prev'
+			});  
+		</script>
+		<!--内容部分-->
+		<div class='content'>
+			<!--游戏-->
+			<div class='bygame'>
+				<ul>
+					<li>
+						<img src="img/pro1.jpg" alt="" />
+						<h3>BPT宣传片</h3>
+						<p>
+							<a href="#">点击播放</a>
+						</p>
+					</li>
+					<li>
+						<img src="img/pro2.jpg" alt="" />
+						<h3>博雅互动宣传视频</h3>
+						<p>
+							<a href="#">点击播放</a>
+						</p>
+					</li>
+					<li>
+						<img src="img/pro3.jpg" alt="" />
+						<h3>斗地主</h3>
+						<p>
+							<a href="#">LANDLORDS</a>
+						</p>
+					</li>
+					<li>
+						<img src="img/pro4.jpg" alt="" />
+						<h3>德州扑克</h3>
+						<p>
+							<a href="#">点击播放</a>
+						</p>
+					</li>
+				</ul>
+				<!--点-->
+				<div class='dian2'>
+					<ol>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ol>
+				</div>
+			</div>
+			<!--新闻-招聘-->
+			<div class='bynewZhao'>
+				<!--新闻-->
+				<div class='xinwen'>
+					 <p class='more'> 
+					 	<a href="#">
+					 		<img src="img/more1.png" alt="" />
+					 	</a>
+					 </p>
+					 <ul>
+					 	<li>
+					 		<span class='time'>09 / 28</span>
+					 		<a href="#">2015博雅国际扑克大赛（BPT）在澳门落幕</a>
+					 	</li>
+					 	<li>
+					 		<span class='time'>09 / 28</span>
+					 		<a href="#">2015博雅国际扑克大赛（BPT）在澳门落幕</a>
+					 	</li>
+					 	<li>
+					 		<span class='time'>09 / 28</span>
+					 		<a href="#">2015博雅国际扑克大赛（BPT）在澳门落幕</a>
+					 	</li>
+					 	<li>
+					 		<span class='time'>09 / 28</span>
+					 		<a href="#">2015博雅国际扑克大赛（BPT）在澳门落幕</a>
+					 	</li>
+					 </ul>
+					 <div class='clear'></div>
+				</div>
+				<!--招聘-->
+				<div class='zhao'>
+					<div class='tou'>
+						<h2>招聘专场</h2>
+						<p>BOYYA JOBS</p>
 					</div>
-					<div class="info">
-						<em class="sat">满意度 77%</em>
-						<span class="price">￥<strong>2684</strong>起</span>
-						<div class="type">
-							国内长线
-						</div>
+					<p class='more'> 
+					 	<a href="#">
+					 		<img src="img/more2.png" alt="" />
+					 	</a>
+					</p>
+					<div class='zpgw'>
+						<h3>专场招聘岗位</h3>
+						<ul>
+							<li>
+								<a href="#">PHP开发工程师</a>
+							</li>
+							<li>
+								<a href="#">java开发工程师</a>
+							</li>
+							<li>
+								<a href="#">web全栈开发工程师</a>
+							</li>
+							<li>
+								<a href="#">大数据开发工程师</a>
+							</li>
+						</ul>
 					</div>
-				</figcaption>
-				<figcaption class="figcaption">
-					<a href=""><img src="img/tour2.jpg"/></a>
-
-					<div class="tour_title">
-						<strong class="title">	
-						😀马尔代夫双鱼岛Olhuvell4晚六日自助游😀
-						</strong>
-						上海出发，机+酒 包含：早晚餐+快艇
-					</div>
-					<div class="info">
-						<em class="sat">满意度97%</em>
-						<span class="price">￥<strong>9999</strong>起</span>
-						<div class="type">
-							出境长线
-						</div>
-					</div>
-				</figcaption>	
-				<figcaption class="figcaption">
-					<a href=""><img src="img/tour3.jpg"/></a>
-					<div class="tour_title">
-						<strong class="title">	
-						😀海南双飞5日游😀
-						</strong>
-						含盐城接送，全程挂牌四星酒店，一价全含，零自费“自费项目”免费送
-					</div>
-					<div class="info">
-						<em class="sat">满意度90%</em>
-						<span class="price">￥<strong>2709</strong>起</span>
-						<div class="type">
-							自助旅游
-						</div>
-					</div>
-				</figcaption>
-				<figcaption class="figcaption">
-					<a href=""><img src="img/tour4.jpg"/></a>
-					<div class="tour_title">
-						<strong class="title">	
-						😀富山-大阪-东京😀
-						</strong>
-						暑期亲子，两天自由，无导游安排自费项目，全程不强迫购物
-					</div>
-					<div class="info">
-						<em class="sat">满意度 97%</em>
-						<span class="price">￥<strong>9499</strong>起</span>
-						<div class="type">
-							自助旅游
-						</div>
-					</div>
-				</figcaption>
-				<figcaption class="figcaption">
-					<a href=""><img src="img/tour5.jpg"/></a>
-					<div class="tour_title">
-						<strong class="title">	
-						😀法瑞意德12日游😀
-						</strong>
-						 4至5星，金色列车，少女峰，部分THE MALL
-					</div>
-					<div class="info">
-						<em class="sat">满意度 97%</em>
-						<span class="price">￥<strong>9199</strong>起</span>
-						<div class="type">
-							国内短线
-						</div>
-					</div>
-				</figcaption>
-				<figcaption class="figcaption">
-					<a href=""><img src="img/tour6.jpg"/></a>
-					<div class="tour_title">
-						<strong class="title">	
-						😀巴厘岛6日半自助游😀
-						</strong>
-						蓝梦出海，独栋别墅，悦榕庄下午茶，纯玩
-					</div>
-					<div class="info">
-						<em class="sat">满意度 95%</em>
-						<span class="price">￥<strong>6488</strong>起</span>
-						<div class="type">
-							国内长线
-						</div>
-					</div>
-				</figcaption>
-				<figcaption class="figcaption">
-					<a href=""><img src="img/tour7.jpg"/></a>
-					<div class="tour_title">
-						<strong class="title">	
-						😀塞舌尔拜9日自助游😀
-						</strong>
-						一有两国，4晚塞舌尔，2晚迪拜，香港EK往返
-					</div>
-					<div class="info">
-						<em class="sat">满意度 100%</em>
-						<span class="price">￥<strong>9669</strong>起</span>
-						<div class="type">
-							邮轮观光
-						</div>
-					</div>
-				</figcaption>
-				<figcaption class="figcaption">
-					<a href=""><img src="img/tour8.jpg"/></a>
-					<div class="tour_title">
-						<strong class="title">	
-						😀花样姐姐土耳其9日或10日游😀
-						</strong>
-						最高立减3000！中餐六菜一汤+土耳其当地美食满足您挑剔味蕾
-					</div>
-					<div class="info">
-						<em class="sat">满意度 93%</em>
-						<span class="price">￥<strong>9999</strong>起</span>
-						<div class="type">
-							出境长线
-						</div>
-					</div>
-				</figcaption>
-				<figcaption class="figcaption">
-					<a href=""><img src="img/tour9.jpg"/></a>
-					<div class="tour_title">
-						<strong class="title">	
-						😀大阪-京都-箱根双飞6日游😀
-						</strong>
-						盐城直飞，不走回头路，境外无自费，超值之旅
-					</div>
-					<div class="info">
-						<em class="sat">满意度 100%</em>
-						<span class="price">￥<strong>5284</strong>起</span>
-						<div class="type">
-							国内短线
-						</div>
-					</div>
-				</figcaption>
-			</figure>
-		</div>	
+				</div>
+				<div clss='clear'></div>
+			</div>
+		</div>
+		<!--尾部-->
+		<div class='foot'>
+			<div class='footIn'>
+				<div class='inLeft'>
+					<a href="#">网站地图</a>
+					<span> | </span>
+					<a href="#">免责声明</a>
+				</div>
+				<div class='inRight'>
+					<span>
+						CopyRight&copy;2004-2014 博雅互动(Boyaa Interactiove) 粤ICP备05062536 zne增值电信业务许可证 ： B2-20110513
+					</span>
+					<img src="img/govIcon.gif" alt="" />
+				</div>
+			</div>
+		</div>
+		<!--返回头部-->
+		<div class='toTop'>
+			<img src="img/top.png" alt="" />
+			<a href="#">TOP</a>
+		</div>
+		
 	</body>
 </html>
